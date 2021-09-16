@@ -8,10 +8,15 @@ from datetime import datetime
 
 from rest_framework import serializers
 
+
 class TestcaseSerializers(serializers.Serializer):
     id = serializers.IntegerField()
     nodeID = serializers.CharField()
     remark = serializers.CharField()
+    status = serializers.IntegerField()
+    priority = serializers.IntegerField()
+    create_time = serializers.DateTimeField()
+    author = serializers.CharField()
 
 
 class TaskSerializers(serializers.Serializer):
